@@ -94,7 +94,7 @@ public class Pizza {
                 System.out.println("Extra Toppings Added: " + 120);
         }
         if(takeAway)
-            System.out.println("Paperbag added: "+20);
+            System.out.println("Paperbag Added: "+20);
 
     }
 }
