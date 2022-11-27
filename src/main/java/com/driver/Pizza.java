@@ -27,9 +27,11 @@ public class Pizza {
             this.price=300;
         else
             this.price=400;
-        basePrice=price;
+        basePrice = price;
         takeAway = false;
         billGenerated=false;
+
+
     }
 
     public int getPrice(){
@@ -81,7 +83,7 @@ public class Pizza {
         // your code goes here
         if(!billGenerated){
             billStatement();
-            bill = "Total Price: "+this.price +"\n";
+            bill += "Total Price: "+this.price +"\n";
             billGenerated = true;
         }
         return this.bill;
@@ -89,17 +91,17 @@ public class Pizza {
 
     private void billStatement()
     {
-        System.out.println("Base Price Of The Pizza: "+this.basePrice);
+        bill += "Base Price Of The Pizza: "+basePrice+"\n";;
         if(extraCheese)
-            System.out.println("Extra Cheese Added: "+80);
+            bill+= "Extra Cheese Added: "+80+ "\n";
         if(extraToppings) {
             if (isVeg)
-                System.out.println("Extra Toppings Added: " + 70);
+                bill += "Extra Toppings Added: " + 70+ "\n";
             else
-                System.out.println("Extra Toppings Added: " + 120);
+                bill += "Extra Toppings Added: " + 120+ "\n";
         }
         if(takeAway)
-            System.out.println("Paperbag Added: "+20);
+            bill += "Paperbag Added: "+20+ "\n";
 
     }
 }
